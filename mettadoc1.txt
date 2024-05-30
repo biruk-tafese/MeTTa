@@ -1,4 +1,5 @@
 #Basic Evaluation of metta
+**************************
 
 In the following program, the first two atoms will be added to the program space, while the next two expressions will be immediately evaluated and appear in the output.
 ****
@@ -20,3 +21,28 @@ A nullary function simply returns its body
 ****
 
 
+Some functions can accept only specific values of its argument. When this argument is passed, the right-hand side of the corresponding equality is returned
+
+******
+(= (only-a A) (Input A is accepted))
+! (only-a A)
+! (only-a B)
+
+*****
+
+
+Functions can have variables as parameters, just like in other languages.
+*********
+(= (duplicate $x) ($x $x))
+! (duplicate A)
+! (duplicate 1.05)
+
+********
+
+
+Its arguments can be expressions with some structure
+**************
+
+(= (swap (Pair $x $y)) (Pair $y $x))
+! (swap (Pair A B)) ; evaluates to (Pair B A)
+************
