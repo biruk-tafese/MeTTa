@@ -1,0 +1,22 @@
+#Basic Evaluation of metta
+
+In the following program, the first two atoms will be added to the program space, while the next two expressions will be immediately evaluated and appear in the output.
+****
+; This line will be ignored.
+Hello ; This symbol will be added to the Space
+(Hello World) ; This expression will also be added
+! (+ 1 2) ; This expression will be immediatedly evaluated
+! (Hi there) ; as well as this one
+*****
+
+
+EQUALITIES
+
+A nullary function simply returns its body
+
+*****
+(= (h) (Hello world))
+! (h)
+****
+
+
